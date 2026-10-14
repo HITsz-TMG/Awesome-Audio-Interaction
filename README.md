@@ -7,16 +7,20 @@
 </div>
 
 <div align="center">
-This repository accompanies our survey <b>Audio Interaction Survey</b> (working title). It collects the 133 works discussed in the survey and organizes them by the survey's taxonomy.
+This repository accompanies our survey of <b>Audio Interaction</b>.
 </div>
 
 <div align="center">
 If you find this project useful, please consider giving us a star ⭐. We welcome recommendations for uncovered work via issues or pull requests.
 </div>
 
+<!--
+
 ## News
 
-🔥 **[2026/10]** Repository initialized from the current survey draft. The paper will be released on arXiv soon.
+🔥 **[2026/10]**  The paper will be released on arXiv soon.
+
+-->
 
 ## Contents
 
@@ -41,15 +45,11 @@ If you find this project useful, please consider giving us a star ⭐. We welcom
     - [2.4.2 Interaction with Agents](#242-interaction-with-agents)
     - [2.4.3 Interaction with Robotic Embodiment](#243-interaction-with-robotic-embodiment)
     - [2.4.4 Interaction with Self-Memory and Lifelong Context](#244-interaction-with-self-memory-and-lifelong-context)
-
-</td><td valign="top">
-
 - [3 Dataset and Benchmark](#3-dataset-and-benchmark)
   - [3.1 Half-Duplex Speech Interaction](#31-half-duplex-speech-interaction)
   - [3.2 Full-Duplex Speech Interaction](#32-full-duplex-speech-interaction)
   - [3.3 Agentic Audio Interaction](#33-agentic-audio-interaction)
 - [4 Related Surveys](#4-related-surveys)
-- [Contributing](#contributing)
 - [Citation](#citation)
 - [Star History](#star-history)
 
@@ -70,7 +70,7 @@ Speech is the only modality that is natively full-duplex: what a speaker hears w
 Architecture describes how a system is built; endogenization describes **who decides**. A cascaded stack can behave full-duplex under an external dialogue manager, and an end-to-end model can remain turn-based.
 
 <div align="center">
-  <img src="assets/taxonomy.svg" width="100%" alt="Taxonomy of audio interaction"/>
+  <img src="assets/taxonomy.png" width="100%" alt="Taxonomy of audio interaction"/>
   <p><em>Taxonomy of audio interaction models: speech components, half-duplex, full-duplex, and agentic interaction. A system may appear in more than one branch.</em></p>
 </div>
 
@@ -111,11 +111,6 @@ Architecture describes how a system is built; endogenization describes **who dec
 > Half-duplex systems organize perception and generation into alternating turns. Core model modalities define three categories: text-to-text in cascaded systems, speech-to-text in Thinker–Talker systems, and speech-to-speech representation modeling in native end-to-end systems. Incremental processing and streaming generation can operate within alternating turns without making a system full-duplex.
 
 #### 2.2.1 Text-Centric Cascaded Interaction
-
-<div align="center">
-  <img src="assets/cascade.png" width="88%" alt="Text-Centric Cascaded Interaction"/>
-  <p><em>Evolution of text-centric cascaded interaction: modular dialogue components → LLM-centered backbone → incremental streaming across ASR, LLM, and TTS.</em></p>
-</div>
 
 **Modular Systems and Language-Side Consolidation**
 
@@ -160,11 +155,6 @@ Architecture describes how a system is built; endogenization describes **who dec
 
 #### 2.2.2 Thinker–Talker Decoupled Interaction
 
-<div align="center">
-  <img src="assets/thinker-talker.png" width="88%" alt="Thinker–Talker Decoupled Interaction"/>
-  <p><em>Evolution of Thinker–Talker interaction: text-position states → text-state fusion → multimodal-state sharing.</em></p>
-</div>
-
 | **Name** | **Year** | **Venue** | **Organization** | **Thinker (input / understanding)** | **Interface (Talker conditions)** | **Talker (generation / streaming)** |
 |---|---|---|---|---|---|---|
 | [Freeze-Omni](https://arxiv.org/abs/2411.00774) | 2025 | ICML | Tencent, NPU, NJU | Streaming encoder + adapter; frozen LLM | Text tokens + hidden-state prefix KV | NAR prefill + AR tokens; streaming codec |
@@ -180,14 +170,7 @@ Architecture describes how a system is built; endogenization describes **who dec
 
 #### 2.2.3 Native End-to-End Speech Interaction
 
-<div align="center">
-  <img src="assets/half_duplex_native.png" width="88%" alt="Native End-to-End Speech Interaction"/>
-  <p><em>Native end-to-end half-duplex speech interaction: (A) text-guided generation and direct speech modeling; (B) expressiveness, paralinguistics, and audio-native reasoning; (C) representations, semantic–acoustic modeling, scheduling, and efficiency.</em></p>
-</div>
-
 **From Speech Language Modeling to Real-Time Speech-to-Speech Interaction**
-
-*GSLM and AudioLM are listed under [Speech Components](#211-discrete-speech-representation).*
 
 | **Name** | **Year** | **Venue** | **Organization** | **Speech Representation** | **Highlight** |
 |---|---|---|---|---|---|
@@ -269,10 +252,6 @@ Architecture describes how a system is built; endogenization describes **who dec
 
 #### 2.3.3 Native Dynamic Interaction
 
-<div align="center">
-  <img src="assets/native_duplex_timing_en.png" width="88%" alt="Native Dynamic Interaction"/>
-  <p><em>Temporal relationships and sequence organization in native full-duplex interaction (multi-stream, flattened, and chunk-alternating layouts).</em></p>
-</div>
 
 **Multi-Stream Parallel Modeling**
 
@@ -479,17 +458,10 @@ Architecture describes how a system is built; endogenization describes **who dec
 | [LALM Evaluation Survey](https://arxiv.org/abs/2505.15957) | 2025 | arXiv |
 | [SpeechLM Survey](https://aclanthology.org/2025.acl-long.682/) | 2025 | ACL |
 
-## Contributing
-
-Entries are generated from [`data/papers.yaml`](data/papers.yaml). To add or fix a paper, edit that file and run:
-
-```bash
-pip install pyyaml
-python scripts/build_readme.py
-```
 
 Please keep each entry under the subsection that matches the survey, and describe the work in one factual sentence (no promotional wording).
 
+ <!--
 ## Citation
 
 If you find this work useful for your research, please cite our survey:
@@ -503,6 +475,8 @@ If you find this work useful for your research, please cite our survey:
 }
 ```
 
+ --> 
+ 
 ## Star History
 
 [![Star History](https://api.star-history.com/svg?repos=HITsz-TMG/Awesome-Audio-Interaction&type=Date)](https://www.star-history.com/#HITsz-TMG/Awesome-Audio-Interaction&Date)
