@@ -128,9 +128,9 @@ Architecture describes how a system is built; endogenization describes **who dec
 
 | **Name** | **Year** | **Venue** | **Type** | **Interface** | **Language Core** | **Execution** | **Highlight** |
 |---|---|---|---|---|---|---|---|
-| [AudioGPT](https://arxiv.org/abs/2304.12995) | 2024 | AAAI | Agent | Text / tool calls | ChatGPT | Tool-orchestrated | ChatGPT orchestrates ASR/TTS interfaces and external audio foundation models. |
+| [AudioGPT](https://arxiv.org/abs/2304.12995) | 2023 | AAAI | Agent | Text / tool calls | ChatGPT | Tool-orchestrated | ChatGPT orchestrates ASR/TTS interfaces and external audio foundation models. |
 | [ESPnet-SDS](https://aclanthology.org/2025.naacl-demo.21/) | 2025 | NAACL Demo | Toolkit | Configurable | Configurable | Configurable | Unified toolkit and evaluation framework comparing cascaded and end-to-end SDS. |
-| [Eva](https://doi.org/10.5555/3709347.3744083) | 2025 | AAMAS | Agent | Text / tool calls | LLM | Agent-orchestrated | ASR–LLM–TTS cascade augmented with telephony, retrieval, and task agents. |
+| [Eva](https://www.ifaamas.org/Proceedings/aamas2025/pdfs/p3035.pdf) | 2025 | AAMAS | Agent | Text / tool calls | LLM | Agent-orchestrated | ASR–LLM–TTS cascade augmented with telephony, retrieval, and task agents. |
 | [FireRedChat](https://arxiv.org/abs/2509.06502) | 2025 | arXiv | System | Text | LLM | External controller | FireRedASR → LLM → FireRedTTS; also has a semi-cascaded variant (see §2.3.1). |
 | [LiveKit Agents](https://docs.livekit.io/agents/) | 2026 | Docs | Framework | Pipeline-dependent | Swappable | Configurable streaming | Pipeline selection and provider interchangeability (STT–LLM–TTS, realtime, half-cascade). |
 | [Pipecat](https://docs.pipecat.ai/) | 2026 | Docs | Framework | Frames | Swappable | Frame-streaming | Frame-based streaming processor pipeline shared by STT, LLM, and TTS. |
@@ -157,8 +157,8 @@ Architecture describes how a system is built; endogenization describes **who dec
 
 | **Name** | **Year** | **Venue** | **Organization** | **Thinker (input / understanding)** | **Interface (Talker conditions)** | **Talker (generation / streaming)** |
 |---|---|---|---|---|---|---|
-| [Freeze-Omni](https://arxiv.org/abs/2411.00774) | 2025 | ICML | Tencent, NPU, NJU | Streaming encoder + adapter; frozen LLM | Text tokens + hidden-state prefix KV | NAR prefill + AR tokens; streaming codec |
-| [LLaMA-Omni](https://arxiv.org/abs/2409.06666) | 2025 | ICLR | ICT/CAS, UCAS | Whisper + adapter; speech instructions | Response hidden states; no separate text input | NAR/CTC units; chunked vocoding |
+| [Freeze-Omni](https://arxiv.org/abs/2411.00774) | 2024 | ICML | Tencent, NPU, NJU | Streaming encoder + adapter; frozen LLM | Text tokens + hidden-state prefix KV | NAR prefill + AR tokens; streaming codec |
+| [LLaMA-Omni](https://arxiv.org/abs/2409.06666) | 2024 | ICLR | ICT/CAS, UCAS | Whisper + adapter; speech instructions | Response hidden states; no separate text input | NAR/CTC units; chunked vocoding |
 | [LLaMA-Omni 2](https://arxiv.org/abs/2505.02625) | 2025 | arXiv | ICT/CAS, UCAS | Whisper + adapter; multi-turn adaptation | Text embeddings + response states; gated fusion | AR read/write scheduling; causal flow matching |
 | [MinMo](https://arxiv.org/abs/2501.06282) | 2025 | arXiv | Alibaba | SenseVoice + projector; speech, emotion, events | Text embeddings + query/response states; projection | AR tokens; fixed interleaving; chunked flow matching |
 | [Qwen2.5-Omni](https://arxiv.org/abs/2503.20215) | 2025 | arXiv | Alibaba | Audio/vision encoders; TMRoPE alignment | Text embeddings + Thinker states; shared history | Dual-track AR; sliding-window flow matching |
@@ -189,7 +189,7 @@ Architecture describes how a system is built; endogenization describes **who dec
 | [Flow-Omni](https://arxiv.org/abs/2412.04917) | 2024 | arXiv | THU, Microsoft | Continuous speech tokens | Autoregressive LLM + flow matching over continuous-valued speech tokens. |
 | [Baichuan-Audio](https://arxiv.org/abs/2502.17239) | 2025 | arXiv | Baichuan | 12.5 Hz multi-codebook | Multi-codebook tokens keep semantic and acoustic cues; interleaved audio–text generation. |
 | [Kimi-Audio](https://arxiv.org/abs/2504.18425) | 2025 | arXiv | Moonshot AI | Continuous in / discrete out | Hybrid representation with chunk-wise flow-matching detokenizer; >13M hours of pretraining audio. |
-| [SLAM-Omni](https://aclanthology.org/2025.findings-acl.115/) | 2025 | ACL Findings | SJTU, SII, Microsoft | Semantic tokens (grouped) | Speaker identity moved to the vocoder; grouped semantic-token prediction and historical text prompting. |
+| [SLAM-Omni](https://aclanthology.org/2025.findings-acl.115/) | 2024 | ACL Findings | SJTU, SII, Microsoft | Semantic tokens (grouped) | Speaker identity moved to the vocoder; grouped semantic-token prediction and historical text prompting. |
 | [VITA-Audio](https://arxiv.org/abs/2505.03739) | 2025 | arXiv | Tencent, NJU, XMU | Audio tokens | Multiple Cross-modal Token Prediction emits several audio tokens per forward pass (3–5× speedup at 7B). |
 
 **Recent Progress: Audio-Native Intelligence**
@@ -197,17 +197,17 @@ Architecture describes how a system is built; endogenization describes **who dec
 | **Name** | **Year** | **Venue** | **Organization** | **Speech Representation** | **Highlight** |
 |---|---|---|---|---|---|
 | [Step-Audio 2](https://arxiv.org/abs/2507.16632) | 2025 | arXiv | StepFun | Latent encoder + audio tokens | Audio-native reasoning with reasoning-oriented RL; paralinguistics shape both content and rendering. |
-| [MOSS-Speech](https://openreview.net/forum?id=zjaV5zmlkl) | 2026 | ICLR | SII, FDU, MOSI | Direct speech pathway | Modality-specific layer splitting and frozen pretraining reduce explicit text mediation. |
+| [MOSS-Speech](https://openreview.net/forum?id=zjaV5zmlkl) | 2025 | ICLR | SII, FDU, MOSI | Direct speech pathway | Modality-specific layer splitting and frozen pretraining reduce explicit text mediation. |
 
 **Industrial Deployment**
 
 | **Name** | **Year** | **Venue** | **Organization** | **Speech Representation** | **Highlight** |
 |---|---|---|---|---|---|
 | [EVI 3](https://www.hume.ai/blog/introducing-evi-3) | 2025 | Product | Hume AI | – | Jointly models linguistic content and vocal behavior for expressive control. |
-| [Nova 2 Sonic](https://aws.amazon.com/blogs/aws/) | 2025 | Product | Amazon | – | Streaming speech understanding and multilingual generation for assistants and customer service. |
-| [Gemini 3.8 Live](https://blog.google/innovation-and-ai/models-and-research/gemini-models/) | 2026 | Product | Google | – | Audio input, low-latency speech generation, multimodal context, and reasoning. |
+| [Nova 2 Sonic](https://aws.amazon.com/blogs/aws/introducing-amazon-nova-2-sonic-next-generation-speech-to-speech-model-for-conversational-ai/) | 2025 | Product | Amazon | – | Streaming speech understanding and multilingual generation for assistants and customer service. |
+| [Gemini 3.8 Live](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/) | 2026 | Product | Google | – | Audio input, low-latency speech generation, multimodal context, and reasoning. |
 | [GPT-Realtime-2.1](https://developers.openai.com/api/docs/models/gpt-realtime-2.1) | 2026 | Product | OpenAI | – | Native speech I/O with reasoning, instruction following, and tool integration. |
-| [Qwen-Audio-3.1-Realtime-Plus](https://www.alibabacloud.com/help/en/model-studio/) | 2026 | Product | Alibaba | – | Push-to-talk turn-based mode with function calling and search. |
+| [Qwen-Audio-3.1-Realtime-Plus](https://www.alibabacloud.com/help/en/model-studio/qwen-audio-3-1-realtime-plus) | 2026 | Product | Alibaba | – | Push-to-talk turn-based mode with function calling and search. |
 
 ### 2.3 Full-Duplex Speech Interaction
 
