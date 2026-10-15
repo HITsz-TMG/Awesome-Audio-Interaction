@@ -331,11 +331,6 @@ Architecture describes how a system is built; endogenization describes **who dec
 
 #### 2.4.3 Interaction with Robotic Embodiment
 
-<div align="center">
-  <img src="assets/embodied_speech_overview.png" width="88%" alt="Interaction with Robotic Embodiment"/>
-  <p><em>Embodied speech interaction: physical and communicative feedback couple spoken intent, grounded execution, and observed task state.</em></p>
-</div>
-
 **Grounding Spoken Instructions**
 
 | **Name** | **Year** | **Venue** | **Setting** | **Highlight** |
